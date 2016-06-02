@@ -1,0 +1,64 @@
+Pork
+Chicken
+Poultry
+Turkey
+Fish
+Pheasant
+Goose
+Ham
+Hot Dogs
+Deer
+Elk
+Rare Elk
+Medium Rare Elk
+Medium Elk
+Medium Well Elk
+Well Done Elk
+Rare Elk Steak
+Medium Rare Elk Steak
+Medium Elk Steak
+Medium Well Elk Steak
+Well Done Elk Steak
+Moose
+Antelope
+Pronghorn
+Bison
+Rare Bison
+Medium Rare Bison
+Medium Bison
+Medium Well Bison
+Well Done Bison
+Rabbit
+Rare Beef
+Medium Rare Beef
+Medium Beef
+Medium Well Beef
+Well Done Beef
+Rare Steak
+Medium Rare Steak
+Medium Steak
+Medium Well Steak
+Well Done Steak
+Ground Beef
+Rare Ground Beef
+Medium Rare Ground Beef
+Medium Ground Beef
+Medium Well Ground Beef
+Well Done Ground Beef
+Hamburger
+Rare Hamburger
+Medium Rare Hamburger
+Medium Hamburger
+Medium Well Hamburger
+Well Done Hamburger
+Burger
+Rare burger
+Medium Rare burger
+Medium burger
+Medium Well burger
+Well Done burger
+Sausage
+Meatball
+Meatloaf
+Lamb
+Veal

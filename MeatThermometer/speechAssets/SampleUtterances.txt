@@ -1,0 +1,10 @@
+MeatIntent what is the internal temperature for {Meat}
+MeatIntent what is the internal temperature for a {Meat}
+MeatIntent what is the internal temperature for an {Meat}
+MeatIntent what is the recommended temperature for {Meat}
+MeatIntent what is the recommended internal temperature for {Meat}
+MeatIntent what should the internal temperature be for {Meat}
+MeatIntent what's the internal temperature for {Meat}
+MeatIntent whats the temperature for {Meat}
+MeatIntent what is the best internal temperature for {Meat}
+MeatIntent what is the best temperature for {Meat}
