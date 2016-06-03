@@ -1,6 +1,7 @@
 /**
 Used MinecraftHelper AlexaSkill Kit as my BoilerPlate.
 Added in additional functionality as needed.
+Old Western accent was intentional in response text, please excuse the grammar.
 */
 
 /**
@@ -12,9 +13,9 @@ Added in additional functionality as needed.
 'use strict';
 
 var AlexaSkill = require('./AlexaSkill'),
-    recipes = require('./meats');
+    temperatures = require('./temperatures');
 
-var APP_ID = amzn1.echo-sdk-ams.app.f6faa47a-e9d1-4e8f-9d27-10518bd95fce;
+var APP_ID = 'amzn1.echo-sdk-ams.app.f6faa47a-e9d1-4e8f-9d27-10518bd95fce';
 
 var MeatThermometer = function () {
     AlexaSkill.call(this, APP_ID);
@@ -44,34 +45,39 @@ MeatThermometer.prototype.eventHandlers.onLaunch = function (launchRequest, sess
         type: AlexaSkill.speechOutputType.PLAIN_TEXT
     };
 
-    response.ask(speechOutput, repromptOutput)
-
+    response.ask(speechOutput, repromptOutput);
 };
 
 MeatThermometer.prototype.intentHandlers = {
-    "RecipeIntent": function (intent, session, response) {
-        var itemSlot = intent.slots.Item,
-            itemName;
-        if (itemSlot && itemSlot.value){
-            itemName = itemSlot.value.toLowerCase();
+    "MeatIntent": function (intent, session, response) {
+        var meatSlot = intent.slots.Meat,
+            meatName;
+
+        console.log("here is my meatSlot: " + meatSlot);
+
+        if (meatSlot && meatSlot.value){
+            meatName = meatSlot.value.toLowerCase();
         }
 
-        var cardTitle = "Internal temperature for " + itemName,
-            recipe = recipes[itemName],
+        console.log("here is my meat: " + meatName);
+        console.log("here is my temperature: " + temperatures[meatName]);
+
+        var cardTitle = "Internal temperature for " + meatName,
+            temperature = temperatures[meatName],
             speechOutput,
             repromptOutput;
-        if (recipe) {
+        if (temperature) {
             speechOutput = {
-                speech: recipe,
+                speech: temperature,
                 type: AlexaSkill.speechOutputType.PLAIN_TEXT
             };
-            response.tellWithCard(speechOutput, cardTitle, recipe);
+            response.tellWithCard(speechOutput, cardTitle, temperature);
         } else {
             var speech;
-            if (itemName) {
-                speech = "Dad gum, how embarassing, I currently do not know the internal temperature for " + itemName + ". What else can I help with?";
+            if (meatName) {
+                speech = "Dad gum, how embarassing, I currently do not know the internal temperature for " + meatName + ". What else can I help with?";
             } else {
-                speech = "You caught me as dry as jerky on this one, I currently do not know that meat. What else can I help with?";
+                speech = "Y'all caught me as dry as jerky on this one... I currently do not know that meat. What else can I help with?";
             }
             speechOutput = {
                 speech: speech,
