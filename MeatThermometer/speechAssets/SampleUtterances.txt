@@ -14,3 +14,4 @@ MeatIntent tell me the temperature for an {Meat}
 MeatIntent tell me the internal temperature for {Meat}
 MeatIntent tell me the internal temperature for a {Meat}
 MeatIntent tell me the internal temperature for an {Meat}
+MeatIntent {Meat}
